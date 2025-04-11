@@ -1,0 +1,16 @@
+# Command to trigger the invite (default: /invite)
+#inviteCommand: "/join"
+
+# Whether to allow anyone to request invites (true = open to all)
+acceptOnly: true
+
+# Message to display when the invite is successful
+inviteMessage: "🎉 Invite sent! Check your email or notifications to accept."
+
+# Message to display when the command is misused
+invalidMessage: "Hmm, something went wrong. Make sure you typed `/join @yourusername` correctly."
+
+# Optional: restrict to specific GitHub usernames
+# allowUsers:
+#   - student1
+#   - student2
