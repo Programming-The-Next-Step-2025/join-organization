@@ -27,12 +27,13 @@ jobs:
             const { data: user } = await github.rest.users.getByUsername({ username });
             if (user) {
               await github.request({
-                method: 'PUT',
+                method: 'POST',
                 url: `/orgs/${orgName}/invitations`,
                 headers: {
                   authorization: `token ${token}`,
                 },
                 invitee_id: user.id,
+                role: 'direct_member'
               });
               console.log(`Invited ${username} to the organization.`);
             } else {
