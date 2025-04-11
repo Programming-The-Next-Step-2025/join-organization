@@ -22,7 +22,7 @@ jobs:
           script: |
             const username = '${{ env.username }}';
             const orgName = 'Programming-The-Next-Step-2025'; // Replace with your organization name
-            const token = '${{ secrets.PERSONAL_ACCESS_TOKEN }}';
+            const token = '${{ secrets.SECRET_PAT }}';
 
             const { data: user } = await github.rest.users.getByUsername({ username });
             if (user) {
